@@ -51,7 +51,7 @@ exports.run = (client, message) => {
 		cmd.run(client, message, args);
 		}
 		catch (e) {
-			console.error(e);
+			console.error(e.stack);
 			message.channel.send(`${client.em.f} **__ERREUR :__**\`\`\`xl\n${e.stack}\`\`\`\nMerci de prévenir <@329669021043523594> (Enevevet#2020) sur le serveur de support (https://discord.gg/haBpCVw)`);
 		};
 	};

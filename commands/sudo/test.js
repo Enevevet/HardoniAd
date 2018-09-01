@@ -8,11 +8,10 @@ var os = require('os');
 
 exports.run = (client, message, args) => {
 
-mess.toLowerCase();
 
 	//client.profiles.deleteAll();
 
-/* 	var u = message.author.id
+ 	var u = message.author.id
 	const name = message.author.username.length > 20 ? message.author.username.substring(0, 17) + "..." : message.author.username;
 	var theme = client.profiles.getProp(u, `theme`);
 	var colo = colorFile[theme];
@@ -37,7 +36,7 @@ mess.toLowerCase();
 		.addImage(avatar, 50, 50, 100, 100)
 		.toBuffer();
 	message.channel.send(new Discord.MessageAttachment(canvas, "mycanvas.png"))
- */
+
 	/*var msg = ` `;
 	client.commands.forEach(command => {
 		msg = msg + `${command.help.name} ${command.help.emoji}\n`

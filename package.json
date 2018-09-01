@@ -10,10 +10,11 @@
 	"author": "Enevevet",
 	"license": "ISC",
 	"dependencies": {
+		"better-sqlite-pool": "^0.1.2",
 		"canvas": "^1.6.11",
 		"canvas-constructor": "^1.0.1",
 		"discord.js": "github:discordjs/discord.js",
-		"enmap": "^2.7.2",
+		"enmap": "^4.0.10",
 		"enmap-level": "^2.1.0",
 		"hastebin-generator": "^1.1.4",
 		"integer": "^1.0.5",
