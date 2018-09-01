@@ -4,4 +4,5 @@
 /fonctions/pubverif.js
 config.json
 commands/other/prefix.js
+commands/sudo/test.js
 extra_modules/bannedwords.js
