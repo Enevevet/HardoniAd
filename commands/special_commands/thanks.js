@@ -1,6 +1,9 @@
+const checkprofile = require("../../fonctions/checkprofile");
+
 exports.run = (client, message, args) => {
-	//Faudrait que je pense à faire soir ça soit l'id
+	//Faudrait que je pense à faire en sorte que ça soit l'id aussi
 	let user = message.mentions.users.first();
+	let u = user.id;
 
 	//On chope le serveur de support et le membre associé à l'user
 	let guildmemb = client.guilds.get(`463980349614194698`).members.find(val => val.id === message.author.id);
@@ -11,8 +14,9 @@ exports.run = (client, message, args) => {
 			message.react(`❌`);
 			return message.channel.send(`<:facepalm:474618049828356137> Mentionne quelqu'un par contre...`);
 		};
+		checkprofile(client, user.id);
 		//Sinon bah on modif hop hop hop !
-		client.profiles.setProp(user.id, `vip`, true);
+		client.profiles.setProp(u, `vip`, true);
 		//Et on confirme que c'est fait !
 		message.channel.send(`**<:vips:476329582782447636> GG à <@${user.id}> qui devient VIP !**`);
 	}

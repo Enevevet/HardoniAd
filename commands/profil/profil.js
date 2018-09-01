@@ -2,6 +2,8 @@
 const colorFile = require(`../../extra_modules/colorFile`);
 //Les embeds ahlàlà
 const Discord = require(`discord.js`);
+const checkprofile = require("../../fonctions/checkprofile");
+
 
 exports.run = (client, message, args) => {
 	//OK GOOGLE BDJZIVDUZABD JZA
@@ -20,15 +22,7 @@ exports.run = (client, message, args) => {
 	var u = user.id;
 
 	//Si il existe pas bah on le crée patate !
-	if (!client.profiles.has(u)) {
-		client.profiles.set(u, {
-			msg: 0,
-			xp: 0,
-			level: 1,
-			vip: false,
-			theme: `default`
-		});
-	};
+	checkprofile(client, u);
 
 	//Sinon on chope tous les élements 
 	var m = client.profiles.getProp(u, `msg`);

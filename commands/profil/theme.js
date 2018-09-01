@@ -2,8 +2,12 @@
 const colorFile = require(`../../extra_modules/colorFile`);
 //Ô embed, mon grand embed...
 const Discord = require(`discord.js`);
+//
+const checkprofile = require(`../../fonctions/checkprofile`)
 
 exports.run = (client, message, args) => {
+
+	checkprofile(client, message.author.id);
 
 	var a = Object.keys(colorFile).join(", ");
 	let colorargs = args.join(' ');

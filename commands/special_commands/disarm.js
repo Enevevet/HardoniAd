@@ -1,3 +1,5 @@
+const checkprofile = require("../../fonctions/checkprofile");
+
 exports.run = (client, message, args) => {
 	//Faudrait que je pense à faire soir ça soit l'id
 	let user = message.mentions.users.first();
@@ -11,6 +13,7 @@ exports.run = (client, message, args) => {
 			message.react(`❌`);
 			return message.channel.send(`<:facepalm:474618049828356137> Mentionne quelqu'un par contre...`);
 		};
+		checkprofile(client, user.id);
 		//Sinon bah on modif hop hop hop !
 		client.profiles.setProp(user.id, `vip`, false);
 		//Et on confirme que c'est fait !
