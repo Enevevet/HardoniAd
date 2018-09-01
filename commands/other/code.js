@@ -32,10 +32,7 @@ exports.run = (client, message, args) => {
 		}
 		else {
 			//Donc s'il fait plus de 2000 caractères on publie sur hb
-			h(commandFile, `js`).then(r => {
-				//Et on envoie tout ça 
-				message.channel.send(`Le code de la commande est supérieur à 2000 caractères. (${commandFile.length})\nVoici un HasteBin : ${r}`);
-			}).catch(console.error); //AU CAS OU 
+			message.channel.send(`https://github.com/Enevevet/HardoniAd/blob/master/commands/${mod}/${command}.js`)
 		};
 	}
 	//Par contre si la commande existe pas
