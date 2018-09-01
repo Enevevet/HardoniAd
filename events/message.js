@@ -47,6 +47,12 @@ exports.run = (client, message) => {
 	if (cmd.help.module === `sudo` && !client.admins.includes(message.author.id)) return message.channel.send(`Cette commande est réservée aux Administrateurs !`);
 	//Donc si tout se passe bien : ON RUN LA COMMANDE ! (avec les arguments de fonction client, message (primordiaux) et args !)
 	if (cmd) {
+		try {
 		cmd.run(client, message, args);
+		}
+		catch (e) {
+			console.error(e);
+			message.channel.send(`${client.em.f} **__ERREUR :__**\`\`\`xl\n${e.stack}\`\`\`\nMerci de prévenir <@329669021043523594> (Enevevet#2020) sur le serveur de support (https://discord.gg/haBpCVw)`);
+		};
 	};
 };

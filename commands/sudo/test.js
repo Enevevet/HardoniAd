@@ -8,25 +8,7 @@ var os = require('os');
 
 exports.run = (client, message, args) => {
 
-	try {
-
-		var user = message.mentions.users.first() || message.guild.members.get(args[0]) || message.guild.members.find(u => u.user.username.toLowerCase() === args[0].toLowerCase()) || message.author;
-		if (user instanceof Discord.GuildMember) user = user.user;
-		console.log(user);
-
-
-
-
-
-	/*let u = message.mentions.users.first();
-	console.log(u.constructor.name)
-	let a = message.guild.members.get('329669021043523594');
-	console.log(a.constructor.name);
-	console.log(a instanceof Discord.GuildMember)*/
-	}
-	catch (e) {
-		console.log(e)
-	}
+mess.toLowerCase();
 
 	//client.profiles.deleteAll();
 
