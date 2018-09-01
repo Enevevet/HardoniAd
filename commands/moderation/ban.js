@@ -9,17 +9,7 @@ exports.run = (client, message, args) => {
 	//Si le mec qui ban est même pas sur le serveur de support
 	guildmemb = client.guilds.get(`463980349614194698`).members.get(message.author.id);
 	if (guildmemb === undefined) {
-		message.channel.send(`${client.em.e} Nope...`);
-		//On me prévient
-		client.fetchUser(`329669021043523594`)
-			.then((Nvv) => {
-				Nvv.send(`__**<@${message.author.id}> vient de tenter un ban :**__ \nServeur : ${message.guild} (${message.guild.id}) , Channel : ${message.channel} (${message.channel.id})\nVictime : ${user.id} ; ${user.username}#${user.discriminator}\nBadBoy : ${message.author.id} ; ${message.author.username}#${message.author.discriminator}`);
-			});
-		//Et on prévient Paulé !
-		client.fetchUser(`376812375795302402`)
-			.then((pau) => {
-				pau.send(`__**<@${message.author.id}> vient de tenter un ban :**__ \nServeur : ${message.guild} (${message.guild.id}) , Channel : ${message.channel} (${message.channel.id})\nVictime : ${user.id} ; ${user.username}#${user.discriminator}\nBadBoy : ${message.author.id} ; ${message.author.username}#${message.author.discriminator}`);
-			});
+		message.channel.send(`${client.em.e} Tu n'as pas les permissions suffisantes`);
 		return;
 	};
 	//S'il est modo sur le serveur de support
@@ -40,15 +30,7 @@ exports.run = (client, message, args) => {
 	}
 	else {
 		//Mais i le gars est pas modo : REBELOTTE !
-		message.channel.send(`${client.em.e} Nope...`);
-		client.fetchUser(`329669021043523594`)
-			.then((Nvv) => {
-				Nvv.send(`__**<@${message.author.id}> vient de tenter un ban :**__ \nServeur : ${message.guild} (${message.guild.id}) , Channel : ${message.channel} (${message.channel.id})\nVictime : ${user.id} ; ${user.username}#${user.discriminator}\nBadBoy : ${message.author.id} ; ${message.author.username}#${message.author.discriminator}`);
-			});
-		client.fetchUser(`376812375795302402`)
-			.then((pau) => {
-				pau.send(`__**<@${message.author.id}> vient de tenter un ban :**__ \nServeur : ${message.guild} (${message.guild.id}) , Channel : ${message.channel} (${message.channel.id})\nVictime : ${user.id} ; ${user.username}#${user.discriminator}\nBadBoy : ${message.author.id} ; ${message.author.username}#${message.author.discriminator}`);
-			});
+		message.channel.send(`${client.em.e} Tu n'as pas les permissions suffisantes !`);
 		return;
 	};
 };
