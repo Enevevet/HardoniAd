@@ -1,0 +1,25 @@
+{
+	"name": "hardoniad",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "Enevevet",
+	"license": "ISC",
+	"dependencies": {
+		"discord.js": "^11.4.1",
+		"enmap": "^2.7.2",
+		"enmap-level": "^2.1.0",
+		"hastebin-generator": "^1.1.4",
+		"integer": "^1.0.5",
+		"mathjs": "^5.1.0",
+		"moment": "^2.22.2",
+		"moment-duration-format": "^2.2.2",
+		"node-gyp": "^3.8.0",
+		"os": "^0.1.1",
+		"os-utils": "0.0.14"
+	}
+}

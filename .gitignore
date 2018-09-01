@@ -1,0 +1,5 @@
+/node_modules/
+/commands/pub/
+/data/
+/fonctions/pubverif.js
+config.json
