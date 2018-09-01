@@ -10,7 +10,9 @@
 	"author": "Enevevet",
 	"license": "ISC",
 	"dependencies": {
-		"discord.js": "^11.4.1",
+		"canvas": "^1.6.11",
+		"canvas-constructor": "^1.0.1",
+		"discord.js": "github:discordjs/discord.js",
 		"enmap": "^2.7.2",
 		"enmap-level": "^2.1.0",
 		"hastebin-generator": "^1.1.4",

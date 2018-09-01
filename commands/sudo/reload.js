@@ -35,7 +35,7 @@ exports.run = (client, message, args) => {
 						//Un peu de log ca fait du bien des fois
 						.then(() => console.log(`Commande ${command} rechargée.`));
 						//Ca c'est les commandes que je veux pas runner automatiquement after-reload
-						var incmd = [`pub`, `ban`, `discord`, `youtube`, `emergency`, `emoji`, `eval`, `hastebin`, `purge`, `reload`, `report`, `suggest`, `unban`, /*`test`,*/ `baninfo`, `pref`];
+						var incmd = [`pub`, `ban`, `discord`, `youtube`, `emergency`, `emoji`, `eval`, `hastebin`, `purge`, `reload`, `report`, `suggest`, `unban`, `test`, `baninfo`, `pref`];
 						//Donc si l'un de ces éléments est ma commande, on return (la table :noel:)
 						if (incmd.includes(command)) return;
 						else {
