@@ -32,5 +32,5 @@ exports.help = {
 	description: `Eval something.`,
 	usage: `eval <ce que tu veux>`,
 	module: `sudo`,
-	emoji: `<:test:484987171229532172>`
+	emoji: `<:eval:485394399837159425>`
 };
