@@ -18,11 +18,11 @@ exports.run = (client, message, args) => {
 	//Y'a des commandes dont je ne souhaites pas dévioler le code pour pas tout me faire piquer non plus
 	if (command === `pub` || command === `discord` || command === `youtube` || command === `prefix`) return message.channel.send(`Je garde quand même le code cette commande :smirk:`);
 
-	//On chope le module (pour trouver le chemin de destination jusqu'au fichier js)
-	var mod = client.commands.get(command).help.module;
 
 	//On vérifie que la commande est bonne
 	if (client.commands.has(command)) {
+		//On chope le module (pour trouver le chemin de destination jusqu'au fichier js)
+		var mod = client.commands.get(command).help.module;
 		//On lit le fichier
 		let commandFile = fs.readFileSync(`./commands/${mod}/${command}.js`, `utf8`);
 		//Si il y a plus de 1992 (ça fait 2000 avec le code block sur Discord) on le publie sur Hastebin
@@ -44,7 +44,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`c`,`showcode`],
+	aliases: [`c`, `showcode`],
 };
 
 exports.help = {
