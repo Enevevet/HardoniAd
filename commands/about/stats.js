@@ -74,7 +74,7 @@ exports.run = (client, message) => {
 			.addField(`Créé`, date, true)
 			.addField(`—— Stats ——`, `\`\`\`http\nServ.    ::  ${client.guilds.size}\nCanaux   ::  ${client.channels.size}\nUtilis.  ::  ${client.users.size}\nEmojis   ::  ${client.emojis.size}\nBanned   ::  ${banne}\`\`\``, true)
 			.addField(`—— Usage ——`, `\`\`\`http\nCPU      ::  ${cpu}%\nMémoire  ::  ${Math.round(process.memoryUsage().rss / 1024 / 1024)} MB\nPing     ::  ${parseInt(client.ping)} ms\nUptime   ::  ${u}\`\`\``, true)
-			.addField(`—— Environment ——`, `\`\`\`http\nNode.js  ::  v9.4.0\nOS       ::  Win. 10 ×64\nModule   ::  Discord.js\nVersion  ::  11.4.2\`\`\``, true)
+			.addField(`—— Environment ——`, `\`\`\`http\nNode.js  :: v10.9.0\nOS       ::    Linux ×64\nModule   ::  Discord.js\nVersion  ::  11.4.2\`\`\``, true)
 			.setThumbnail(`https://media.discordapp.net/attachments/463980349614194700/464688512772472842/profilpfp.png?width=473&height=473`)
 			.setColor(status[client.user.presence.status])
 			.setFooter(`HardoniAd by Enevevet#2020`, `https://cdn.discordapp.com/avatars/329669021043523594/d44fb06af2453336e3c52fb4921f4723.png?size=2048`)

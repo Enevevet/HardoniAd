@@ -4,10 +4,14 @@ je devais tout commenter, j'aurais pas fini xD*/
 var Discord = require(`discord.js`);
 const { Canvas } = require('canvas-constructor');
 var colorFile = require("../../extra_modules/colorFile");
+var os = require('os');
 
 exports.run = (client, message, args) => {
 
+	var a = os.platform();
 
+	console.log(a);
+	message.channel.send(a);
 	
 
 	//client.profiles.deleteAll();
