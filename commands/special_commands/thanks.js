@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 		//S'il a pas mentionné ça va pas
 		if (!message.mentions.users.first()) {
 			message.react(`❌`);
-			return message.channel.send(`<:facepalm:474618049828356137> Mentionne quelqu'un par contre...`);
+			return message.channel.send(`${client.em.e} Mentionne quelqu'un par contre...`);
 		};
 		checkprofile(client, user.id);
 		//Sinon bah on modif hop hop hop !

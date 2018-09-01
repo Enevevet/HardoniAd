@@ -41,7 +41,11 @@ client.talkedRecently = new Set();
 
 //Petite folie !
 client.admins = [`329669021043523594`, `376812375795302402`];
-client.erre = ["<:nope:473803719440597003>","<:done:473803590532595712>"]
+client.em = {
+	d: "<:done:473803590532595712>", //done
+	e: "<:nope:473803719440597003>", //error
+	f: "<:outils:464228811416797184>" //fix
+}
 
 //Ici grâce au FS (FileSystem) on demande à notre code que lorsqu'un event advient, qu'il fouille dans le dossier "events" et qu'il ouvre le fichier qui a un nom correspondant !
 fs.readdir(`./events/`, (e, files) => {

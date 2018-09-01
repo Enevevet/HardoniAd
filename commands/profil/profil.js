@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
 	}
 	else if (user === undefined) user = message.author;
 	//Et ouais tout ça pour ça
-	if (user.bot) return message.channel.send(`${client.erre[0]} Les bots n'ont pas de profil !`)
+	if (user.bot) return message.channel.send(`${client.em.e} Les bots n'ont pas de profil !`)
 	var u = user.id;
 
 	//Si il existe pas bah on le crée patate !
@@ -34,8 +34,8 @@ exports.run = (client, message, args) => {
 	var colo = colorFile[theme];
 
 	//Petit fantasme des emojis
-	var u = vip === true ? client.erre[1] : client.erre[0];
-	var w = banned === true ? client.erre[1] : client.erre[0];
+	var u = vip === true ? client.em.d : client.em.e;
+	var w = banned === true ? client.em.d : client.em.e;
 
 	//On déclare l'embed du profil
 	var e = new Discord.MessageEmbed()

@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
 
 	//FUUUUUUUUUU
 	if (!args[0]) {
-		message.channel.send(`<:facepalm:474618049828356137> Dis-moi ce que je dois répéter...`);
+		message.channel.send(`${client.em.e} Dis-moi ce que je dois répéter...`);
 	}
 	else {
 		//On chope les args

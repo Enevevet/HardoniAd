@@ -3,7 +3,7 @@ const reload = require(`../../fonctions/reload`)
 
 exports.run = (client, message, args) => {
 	//Quand je suis fatigué et ouiii
-	if (!args[0]) return message.channel.send(`<:facepalm:474618049828356137> Par contre si tu me dis pas quelle commande reload, ça va pas faire...`);
+	if (!args[0]) return message.channel.send(`${client.em.e} Par contre si tu me dis pas quelle commande reload, ça va pas faire...`);
 	//Hop hop hop on commence à déclarer pour ensuite optimiser !
 	let command;
 	let mod;
@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 
 	//Donc si ça n'a rien donné on se barre : la commande n'existe pas !
 	if (!command) {
-		return message.channel.send(`<:facepalm:474618049828356137> La commande \`${args[0]}\` n'existe pas...`);
+		return message.channel.send(`${client.em.e} La commande \`${args[0]}\` n'existe pas...`);
 	} else {
 		//Mais sinon c'est pas la même !
 		//On saisit le module (caché dans les conf.help de la commande)

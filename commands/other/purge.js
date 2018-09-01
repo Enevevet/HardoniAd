@@ -6,17 +6,17 @@ exports.run = (client, message, args) => {
 	//On récupère les args
 	let nums = args.join(` `);
 	if (!args[0]) { //si aucun args
-		message.channel.send(`<:facepalm:474618049828356137> Merci de me dire combien de message tu veux supprimer...`);
+		message.channel.send(`${client.em.e} Merci de me dire combien de message tu veux supprimer...`);
 	}
 
 	else { //si args
 		let numa = parseInt(nums) + 1;
 		if (isNaN(numa)) { //si pas d'args num
-			message.channel.send(`<:facepalm:474618049828356137> Merci de rentrer un chiffre...`);
+			message.channel.send(`${client.em.e} Merci de rentrer un chiffre...`);
 		}
 		else { //si args num
 			if (numa === 1) { //si args =0
-				message.channel.send(`<:facepalm:474618049828356137> Je peux pas supprimer zéro message...`);
+				message.channel.send(`${client.em.e} Je peux pas supprimer zéro message...`);
 			}
 			else { //si args != 0
 				message.channel.bulkDelete(numa);

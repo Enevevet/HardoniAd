@@ -2,7 +2,7 @@ exports.run = (client, message, args) => {
 
 	var args = args.join(` `);
 	//Faut quand même un minimum de mots
-	if (!args[4]) return message.channel.send(`<:facepalm:474618049828356137> Merci d'au moins mettre une suggestion de plus de 5 mots...`);
+	if (!args[4]) return message.channel.send(`${client.em.e} Merci d'au moins mettre une suggestion de plus de 5 mots...`);
 	//On chope le canal #suggestion du serveur de support du bot
 	client.channels.get(`474371242317840384`).send(args).then(m => { //On l'envoie
 		//Et on met deux réactions pour connaitre l'avis de la population    

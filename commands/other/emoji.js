@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
 	}
 
 	var emo;
-	if (!args[0]) return message.channel.send(`<:facepalm:474618049828356137> Ok mais de quel emoji tu parles ?...\nUtilisation de la commande : \`emoji <emoji>\``);
+	if (!args[0]) return message.channel.send(`${client.em.e} Ok mais de quel emoji tu parles ?...\nUtilisation de la commande : \`emoji <emoji>\``);
 
 	//Si l'user parlait de son nom
 	if (message.guild.emojis.some(emoji => emoji.name === args[0].toLowerCase())) {
@@ -38,7 +38,7 @@ exports.run = (client, message, args) => {
 	};
 	//Mais si tout ça a fail c'est que l'emote n'existe pas ! Je peux pas faire mieux monsieur !
 	if (!emo) {
-		message.channel.send(`<:facepalm:474618049828356137> Merci de rentrer un emoji du serveur...`);
+		message.channel.send(`${client.em.e} Merci de rentrer un emoji du serveur...`);
 	}
 	else {
 		//Mais bon si on l'a trouve on va gâter le publics en informations ! Alors on déclare tout ça !

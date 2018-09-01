@@ -7,7 +7,10 @@ var colorFile = require("../../extra_modules/colorFile");
 
 exports.run = (client, message, args) => {
 
-	client.profiles.deleteAll();
+
+	
+
+	//client.profiles.deleteAll();
 
 /* 	var u = message.author.id
 	const name = message.author.username.length > 20 ? message.author.username.substring(0, 17) + "..." : message.author.username;

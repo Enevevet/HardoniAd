@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
 
 	//S'il veulent juste report pour le fun...
-	if (!args[0]) return message.channel.send(`<:facepalm:474618049828356137> Tu ne peux pas report du vent...\nUtilisation de la commande : \`report <idDeLaPersonne> <Votre Signalement>\``);
+	if (!args[0]) return message.channel.send(`${client.em.e} Tu ne peux pas report du vent...\nUtilisation de la commande : \`report <idDeLaPersonne> <Votre Signalement>\``);
 	let id = args[0];
 
 	//On cherche dans les users que connait le bot le méchant
@@ -24,7 +24,7 @@ exports.run = (client, message, args) => {
 		})
 		.catch((err) => { //Si l'id est invalide
 			console.log(err);
-			message.channel.send(`<:facepalm:474618049828356137> Désolé mais cet id est invalide...\nUtilisation de la commande : \`=report <idDeLaPersonne> <Votre Signalement>\``);
+			message.channel.send(`${client.em.e} Désolé mais cet id est invalide...\nUtilisation de la commande : \`=report <idDeLaPersonne> <Votre Signalement>\``);
 		});
 };
 

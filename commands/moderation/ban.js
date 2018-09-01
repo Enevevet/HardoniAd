@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
 	//Si le mec qui ban est même pas sur le serveur de support
 	guildmemb = client.guilds.get(`463980349614194698`).members.get(message.author.id);
 	if (guildmemb === undefined) {
-		message.channel.send(`<:facepalm:474618049828356137> Nope...`);
+		message.channel.send(`${client.em.e} Nope...`);
 		//On me prévient
 		client.fetchUser(`329669021043523594`)
 			.then((Nvv) => {
@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
 		//Mais qu'il est bête
 		if (!message.mentions.users.first()) {
 			message.react(`❌`);
-			return message.channel.send(`<:facepalm:474618049828356137> Mentionne quelqu'un par contre...`);
+			return message.channel.send(`${client.em.e} Mentionne quelqu'un par contre...`);
 		};
 		//Voire très bête
 		if (client.banned.has(user.id)) return message.channel.send(`Déjà ban celui-là !`);
@@ -40,7 +40,7 @@ exports.run = (client, message, args) => {
 	}
 	else {
 		//Mais i le gars est pas modo : REBELOTTE !
-		message.channel.send(`<:facepalm:474618049828356137> Nope...`);
+		message.channel.send(`${client.em.e} Nope...`);
 		client.fetchUser(`329669021043523594`)
 			.then((Nvv) => {
 				Nvv.send(`__**<@${message.author.id}> vient de tenter un ban :**__ \nServeur : ${message.guild} (${message.guild.id}) , Channel : ${message.channel} (${message.channel.id})\nVictime : ${user.id} ; ${user.username}#${user.discriminator}\nBadBoy : ${message.author.id} ; ${message.author.username}#${message.author.discriminator}`);

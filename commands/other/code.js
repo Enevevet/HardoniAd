@@ -6,7 +6,7 @@ const h = require(`hastebin-generator`);
 exports.run = (client, message, args) => {
 
 	//Si le mec oublie de dire de quelle commande il parle
-	if (!args[0]) return message.channel.send(`<:facepalm:474618049828356137> Non mais dis moi de quelle commande tu veux voir le code quoi...\nUtilisation de la commande : \`${exports.help.usage}\``);
+	if (!args[0]) return message.channel.send(`${client.em.e} Non mais dis moi de quelle commande tu veux voir le code quoi...\nUtilisation de la commande : \`${exports.help.usage}\``);
 	//C'est parti
 	let command;
 	//On vérifie que la commande existe dans notre Collection
@@ -37,7 +37,7 @@ exports.run = (client, message, args) => {
 	}
 	//Par contre si la commande existe pas
 	else if (!client.commands.has(command)) {
-		message.channel.send(`<:facepalm:474618049828356137> Cette commande n'existe pas...\nUtilisation de la commande : \`${exports.help.usage}\``);
+		message.channel.send(`${client.em.e} Cette commande n'existe pas...\nUtilisation de la commande : \`${exports.help.usage}\``);
 	};
 };
 

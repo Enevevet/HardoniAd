@@ -6,7 +6,7 @@ const Discord = require(`discord.js`);
 exports.run = (client, message, args) => {
 
 	//Et oui pour quand je suis fatigué
-	if (!args[1]) return message.channel.send(`<:facepalm:474618049828356137> Toi tu sais pas utiliser cette commande alors que t'es mon owner ? Wtf ?...`);
+	if (!args[1]) return message.channel.send(`${client.em.e} Toi tu sais pas utiliser cette commande alors que t'es mon owner ? Wtf ?...`);
 	//Les bonnes variables sa mère !
 	var t = args[0];
 	var q = args.slice(1).join(` `);

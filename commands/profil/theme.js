@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
 	if (!colorargs || !colorFile.hasOwnProperty(colorargs.toLowerCase())) return message.channel.send(`Merci de choisir parmi les couleurs suivantes : ${a}`);
 
 
-	if (client.profiles.getProp(message.author.id, `theme`) === colorargs) return message.channel.send(`${client.erre[0]} Tu as déjà ce thème appliqué !`)
+	if (client.profiles.getProp(message.author.id, `theme`) === colorargs) return message.channel.send(`${client.em.e} Tu as déjà ce thème appliqué !`)
 
 	//S'il veut un thème vip mais qu'il l'est pas
 	if (colorargs.toLowerCase() === `random` && client.profiles.getProp(message.author.id, `vip`) === false) return message.channel.send(`Désolé mais ce thème est reservé aux VIPS`);
