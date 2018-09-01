@@ -42,7 +42,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`del`, `pu`],
+	aliases: [`delete`, `bulkdelete`],
 };
 
 exports.help = {

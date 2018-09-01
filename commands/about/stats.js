@@ -89,7 +89,7 @@ exports.run = (client, message) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`info`],
+	aliases: [`info`,`statistics`],
 };
 
 exports.help = {

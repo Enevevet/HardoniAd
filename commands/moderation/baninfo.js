@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`bi`, `bancard`, `bc`],
+	aliases: [`bi`, `bancard`, `bc`, `case`],
 };
 
 exports.help = {

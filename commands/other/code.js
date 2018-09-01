@@ -44,7 +44,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`c`],
+	aliases: [`c`,`showcode`],
 };
 
 exports.help = {

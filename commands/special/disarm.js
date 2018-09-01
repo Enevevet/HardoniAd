@@ -26,13 +26,13 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`disa`],
+	aliases: [`delvip`],
 };
 
 exports.help = {
 	name: `disarm`,
 	description: `Disarm an user (ça lui vire le vip quoi xD)`,
 	usage: `disarm <utilisateur>`,
-	module: `special_commands`,
+	module: `special`,
 	emoji: `<:disarm:484983193288835072>`
 };

@@ -64,7 +64,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`pl`],
+	aliases: [`pl`,`sondage`],
 };
 
 exports.help = {

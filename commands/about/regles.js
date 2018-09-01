@@ -20,7 +20,7 @@ exports.run = (client, message) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: false,
-	aliases: [`rules`],
+	aliases: [`rules`, `reglement`],
 };
 
 exports.help = {

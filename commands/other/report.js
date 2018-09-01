@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`re`],
+	aliases: [`signaler`],
 };
 
 exports.help = {

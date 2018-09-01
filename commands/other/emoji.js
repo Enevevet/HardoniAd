@@ -72,7 +72,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`e`, `emote`],
+	aliases: [`e`, `emote`,`emoticone`],
 };
 
 exports.help = {

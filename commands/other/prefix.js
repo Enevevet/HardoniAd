@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`pref`, `newprefix`],
+	aliases: [`pref`, `newprefix`, `setprefix`],
 };
 
 exports.help = {

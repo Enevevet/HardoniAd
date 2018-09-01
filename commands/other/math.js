@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`m`],
+	aliases: [`m`,`maths`,`mathematics`,`mathematiques`],
 };
 
 exports.help = {

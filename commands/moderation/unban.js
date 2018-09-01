@@ -25,7 +25,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
 	enabled: true,
 	guildOnly: true,
-	aliases: [`ub`],
+	aliases: [`ub`,`pardon`],
 };
 
 exports.help = {
