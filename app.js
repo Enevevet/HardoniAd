@@ -1,6 +1,4 @@
 
-
-
 /*                                                                          dddddddd                                                                                     dddddddd
   HHHHHHHHH     HHHHHHHHH                                                 d::::::d                                     iiii                 AAA                        d::::::d
   H:::::::H     H:::::::H                                                 d::::::d                                    i::::i               A:::A                       d::::::d
@@ -90,7 +88,6 @@ fs.readdir(`./commands/`, (e, folders) => {
 		});
 	});
 });
-
 
 //Si UN JOUR on rencontre un erreur :
 client.on(`error`, console.error);
