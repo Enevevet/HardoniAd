@@ -10,7 +10,6 @@ exports.run = (client, message) => {
 		.setTimestamp()
 		.addField(`Report de pub`, `En mettant une réaction \`🚩\`, le message est signalé à l'équipe de modération.`)
 		.addField(`HardoniaAd Starring`, `Lorsqu'une pub atteint 30 réactions \`⭐️\` elle est re-publiée en #hardoniad-star !`, true)
-		.addField(`Système de profil`, `Prouver votre notoriété avec vos statistiques HardoniAd : vos serveurs, vos pubs envoyées, vos réactions aux pubs ajoutées, vos pubs starred, etc.\n**__FAIT__**`, true)
 		.setThumbnail(`https://media.discordapp.net/attachments/463980349614194700/464688512772472842/profilpfp.png?width=473&height=473`)
 		.setColor(`#FCB00A`)
 		.setFooter(`HardoniAd by Enevevet#2020`, `https://cdn.discordapp.com/avatars/329669021043523594/d44fb06af2453336e3c52fb4921f4723.png?size=2048`)
