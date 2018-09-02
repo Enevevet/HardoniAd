@@ -16,6 +16,7 @@
 		"discord.js": "github:discordjs/discord.js",
 		"enmap": "^4.0.10",
 		"enmap-level": "^2.1.0",
+		"eslint": "^5.5.0",
 		"hastebin-generator": "^1.1.4",
 		"integer": "^1.0.5",
 		"mathjs": "^5.1.1",
