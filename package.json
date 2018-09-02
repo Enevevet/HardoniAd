@@ -18,7 +18,7 @@
 		"enmap-level": "^2.1.0",
 		"hastebin-generator": "^1.1.4",
 		"integer": "^1.0.5",
-		"mathjs": "^5.1.0",
+		"mathjs": "^5.1.1",
 		"moment": "^2.22.2",
 		"moment-duration-format": "^2.2.2",
 		"node-gyp": "^3.8.0",
