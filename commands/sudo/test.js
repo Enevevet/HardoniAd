@@ -5,44 +5,76 @@ var Discord = require(`discord.js`);
 const { Canvas } = require('canvas-constructor');
 var colorFile = require("../../extra_modules/colorFile");
 var os = require('os');
+const { resolve, join } = require("path");
+const { get } = require("snekfetch");
 
 exports.run = (client, message, args) => {
+	async function profile(message, client) {
+		const imageUrlRegex = /\?size=2048$/g;
+		const { body: avatar } = await get(message.author.displayAvatarURL().replace(imageUrlRegex, "?size=128"));
+		const name = message.member.displayName.length > 20 ? member.displayName.substring(0, 17) + "..." : member.displayName;
+		var u = message.author.id
+		var theme = client.profiles.getProp(u, `theme`);
+		var colo = colorFile[theme];
+		return new Canvas(400, 300)
+			.setColor(colo)
+			.addRect(0, 0, 400, 300)
+			.setColor("#2C2F33")
+			.addRect(0, 0, 150, 150)
+			.addRect(195, 45, 205, 46)
+			.addRect(195, 108, 205, 46)
+			.setColor("#FFFFFF")
+			.setTextFont("18px Helvetica")
+			.setTextAlign('left')
+			.setColor("#2C2F33")
+			.addText("User :", 195, 27)
+			.setTextAlign('center')
+			.setColor("#FFFFFF")
+			.addText(name, 298, 75)
+			.addImage(avatar, 50, 50, 100, 100)
+			.toBuffer();
+	 }
+  
+
+	 message.channel.send(new Discord.MessageAttachment(profile(message, client), "mycanvas.png"))
+
+
+
+
+
 
 
 	//client.profiles.deleteAll();
 
- 	var u = message.author.id
-	const name = message.author.username.length > 20 ? message.author.username.substring(0, 17) + "..." : message.author.username;
-	var theme = client.profiles.getProp(u, `theme`);
-	var colo = colorFile[theme];
-	const imageUrlRegex = /\?size=2048$/g;
-	const avatar = message.author.displayAvatarURL().replace(imageUrlRegex, "?size=128");
-	console.log(avatar);
-	var canvas = new Canvas(400, 300)
-		.setColor(colo)
-		.addRect(0, 0, 400, 300)
-		.setColor("#2C2F33")
-		.addRect(0, 0, 150, 150)
-		.addRect(195, 45, 205, 46)
-		.addRect(195, 108, 205, 46)
-		.setColor("#FFFFFF")
-		.setTextFont("18px Helvetica")
-		.setTextAlign('left')
-		.setColor("#2C2F33")
-		.addText("User :", 195, 27)
-		.setTextAlign('center')
-		.setColor("#FFFFFF")
-		.addText(name, 298, 75)
-		.addImage(avatar, 50, 50, 100, 100)
-		.toBuffer();
-	message.channel.send(new Discord.MessageAttachment(canvas, "mycanvas.png"))
+	/*var u = message.author.id
+ const name = message.author.username.length > 20 ? message.author.username.substring(0, 17) + "..." : message.author.username;
+ var theme = client.profiles.getProp(u, `theme`);
+ var colo = colorFile[theme];
+ var canvas = new Canvas(400, 300)
+	 .setColor(colo)
+	 .addRect(0, 0, 400, 300)
+	 .setColor("#2C2F33")
+	 .addRect(0, 0, 150, 150)
+	 .addRect(195, 45, 205, 46)
+	 .addRect(195, 108, 205, 46)
+	 .setColor("#FFFFFF")
+	 .setTextFont("18px Helvetica")
+	 .setTextAlign('left')
+	 .setColor("#2C2F33")
+	 .addText("User :", 195, 27)
+	 .setTextAlign('center')
+	 .setColor("#FFFFFF")
+	 .addText(name, 298, 75)
+	 .addImage(avatar, 50, 50, 100, 100)
+	 .toBuffer();
+ message.channel.send(new Discord.MessageAttachment(canvas, "mycanvas.png"))
 
-	/*var msg = ` `;
-	client.commands.forEach(command => {
-		msg = msg + `${command.help.name} ${command.help.emoji}\n`
-	});
+ /*var msg = ` `;
+ client.commands.forEach(command => {
+	 msg = msg + `${command.help.name} ${command.help.emoji}\n`
+ });
 
-	message.channel.send(msg);*/
+ message.channel.send(msg);*/
 
 };
 
