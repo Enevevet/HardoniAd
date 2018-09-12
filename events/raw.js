@@ -1,5 +1,5 @@
 exports.run = async (client, event) => {
-	if (!(event.t === "MESSAGE_REACTION_ADD" || event.t === "MESSAGE_REACTION_REMOVE")) return
+	if (!(event.t === "MESSAGE_REACTION_ADD")) return
 	const { d: data } = event;
 	console.log(data.emoji.name)
 	const channel = client.channels.get(data.channel_id)|| await user.createDM();
