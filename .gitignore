@@ -5,4 +5,4 @@
 config.json
 /commands/other/prefix.js
 extra_modules/bannedwords.js
-/commands/sudo/test.js
+commands/sudo/test.js

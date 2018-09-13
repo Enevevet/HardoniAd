@@ -1,43 +1,20 @@
 /*Boh boh boh, pas besoin de commenter ça, c'est mon aire de jeux !
 ça change bien 456789 fois par jours ici alors si à chaque fois
 je devais tout commenter, j'aurais pas fini xD*/
-var Discord = require(`discord.js`);
-const { Canvas } = require('canvas-constructor');
-var colorFile = require("../../extra_modules/colorFile");
-var os = require('os');
-const { resolve, join } = require("path");
-const { get } = require("snekfetch");
+const Discord = require('discord.js');
+const Canvas = require('canvas');
+const snekfetch = require('snekfetch');
 
-exports.run = (client, message, args) => {
-	async function profile(message, client) {
-		const imageUrlRegex = /\?size=2048$/g;
-		const { body: avatar } = await get(message.author.displayAvatarURL().replace(imageUrlRegex, "?size=128"));
-		const name = message.member.displayName.length > 20 ? member.displayName.substring(0, 17) + "..." : member.displayName;
-		var u = message.author.id
-		var theme = client.profiles.getProp(u, `theme`);
-		var colo = colorFile[theme];
-		return new Canvas(400, 300)
-			.setColor(colo)
-			.addRect(0, 0, 400, 300)
-			.setColor("#2C2F33")
-			.addRect(0, 0, 150, 150)
-			.addRect(195, 45, 205, 46)
-			.addRect(195, 108, 205, 46)
-			.setColor("#FFFFFF")
-			.setTextFont("18px Helvetica")
-			.setTextAlign('left')
-			.setColor("#2C2F33")
-			.addText("User :", 195, 27)
-			.setTextAlign('center')
-			.setColor("#FFFFFF")
-			.addText(name, 298, 75)
-			.addImage(avatar, 50, 50, 100, 100)
-			.toBuffer();
-	 }
-  
+exports.run = async (client, message, args) => {
+	switch (args[0]) {
+		case `profile`:
+			const canvas = Canvas.createCanvas(750, 501);
+			const ctx = canvas.getContext('2d');
 
-	 message.channel.send(new Discord.MessageAttachment(profile(message, client), "mycanvas.png"))
-
+			const background = await Canvas.loadImage('../../ressources/profile.jpg');
+			ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
+			const attachment = new Discord.Attachment(canvas.toBuffer(), 'welcome-image.png');
+	}
 
 
 
